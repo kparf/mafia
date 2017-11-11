@@ -1,3 +1,10 @@
 {
-    "extends": "keystone"
+  "extends": "keystone",
+  "rules" : {
+    "comma-dangle": ["error", "never"],
+    "key-spacing" : ["error", {
+      "beforeColon": true
+    }],
+    "quotes" : ["error", "double"]
+  }
 }
