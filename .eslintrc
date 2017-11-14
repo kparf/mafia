@@ -5,6 +5,7 @@
     "key-spacing" : ["error", {
       "beforeColon": true
     }],
-    "quotes" : ["error", "double"]
+    "quotes" : ["error", "double"],
+    "indent": ["error", 4]
   }
 }
