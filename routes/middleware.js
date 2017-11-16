@@ -7,7 +7,8 @@
  * you have more middleware you may want to group it as separate
  * modules in your project's /lib directory.
  */
-var _ = require("lodash");
+const _ = require("lodash");
+const { getMainMenuItems } = require("../services/menu-service");
 
 
 /**
@@ -17,15 +18,8 @@ var _ = require("lodash");
 	the navigation in the header, you may wish to change this array
 	or replace it with your own templates / logic.
 */
-exports.initLocals = function (req, res, next) {
-    res.locals.navLinks = [
-        { label : "Клуб", key : "home", href : "/" },
-        { label : "Новости", key : "blog", href : "/blog" },
-        { label : "Где Играть", key : "location", href : "/location" },
-        { label : "Рейтинг", key : "rating", href : "/rating" },
-        { label : "Фото Галерея", key : "gallery", href : "/gallery" },
-        { label : "Контакты", key : "contact", href : "/contact" }
-    ];
+exports.initLocals = async function (req, res, next) {
+    res.locals.navLinks = await getMainMenuItems();
     res.locals.user = req.user;
     next();
 };
