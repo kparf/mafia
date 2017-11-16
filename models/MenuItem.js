@@ -11,6 +11,9 @@ var MenuItem = new keystone.List("MenuItem", {
 });
 
 MenuItem.add({
+    index : {
+        type : Number
+    },
     title : {
         type : String,
         requred : true
@@ -36,5 +39,6 @@ MenuItem.schema.virtual("link").get(function () {
     return this.page.slug || this.customLink;
 });
 
-MenuItem.defaultColumns = "title, state|20%, page|20%, customLink|20%";
+MenuItem.defaultSort = "indext";
+MenuItem.defaultColumns = "title, index|10%, state|22%, page|22%, customLink|22%";
 MenuItem.register();
