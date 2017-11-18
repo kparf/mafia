@@ -1,0 +1,54 @@
+@import "colors";
+
+header {
+    background-color: @primary-dark-color;
+    height: 150px;
+    font-size: 16px;
+    font-family: Comfortaa;
+
+        .navigation {
+            display: flex;
+            background-color: inherit;
+            border: 0;
+            justify-content: space-between;
+            margin-top: 20px;
+            
+            .header {
+                padding: 10px 15px;
+            }
+            
+            .menu {
+                flex-grow: 1;
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                justify-content: flex-end;
+                align-items: center;
+
+                li {
+                    display: block;
+                    padding: 15px 0 15px 40px;
+                }
+            }
+            
+            a {
+                color: @text-on-primary-color;
+                font-weight: bold;
+            }
+            
+            a:hover {
+                color: @secondary-dark-color;
+                text-decoration: none;
+            }
+            
+            a:active {
+                text-decoration: none;
+            }
+        }
+    .line {
+        height: 4px;
+        background-color: @secondary-dark-color;
+        width: 100%;
+    }
+}

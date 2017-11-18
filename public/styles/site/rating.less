@@ -1,0 +1,60 @@
+@import "colors";
+
+.container.content.rating {
+    
+    .win {
+        color: @green-color;
+    }
+    
+    .defeat {
+        color: @secondary-color;
+    }
+    
+    .rating {
+        color: @yellow-color;
+    }
+    
+    .civilian {
+        background-color: @secondary-dark-color;
+    }
+    
+    .mafia {
+        background-color: @primary-dark-color;
+    }
+
+    table {
+        margin: 15px 0px;
+        width: 100%;
+        font-size: 12px;
+        
+        th {
+            
+        }
+        
+        th, td {
+            border: 1px solid @text-on-primary-color;
+            padding: 5px;
+            text-align: center;
+        }
+
+        tr:first-child {
+            th {
+                border-top: 0;
+            }
+        }
+
+        tr:last-child {
+            td {
+                border-bottom: 0;
+            }
+        }
+
+        th:first-child, td:first-child {
+            border-left: 0;
+        }
+        
+        th:last-child, td:last-child {
+            border-right: 0;
+        }
+    }
+}
