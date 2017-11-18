@@ -1,25 +1,25 @@
 <div class="container">
-	<div class="row">
-		<div class="col-sm-12 col-md-12">
-			<div class="blog">
-				{{# each data.posts.results}}
-				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
-					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
-					{{#if image}}
-						<img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img">
-					{{/if}}
-					<p>
-						{{{content.brief}}}
-					</p>
-					{{#if content.extended}}
-						<p class="read-more">
-							<a href="{{postUrl slug}}">Читать дальше...</a>
-						</p>
-					{{/if}}
-				</div>
-				{{/each}}
-			</div>
-		</div>
-	</div>
-	{{>pagination}}
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="blog">
+                {{# each data.posts.results}}
+                <div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+                    <h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+                    {{#if image}}
+                        <img src="{{{cloudinaryUrl image width=160 height=160 crop='fit' }}}" class="img">
+                    {{/if}}
+                    <p>
+                        {{{content.brief}}}
+                    </p>
+                    {{#if content.extended}}
+                        <p class="read-more">
+                            <a href="{{postUrl slug}}">Читать дальше...</a>
+                        </p>
+                    {{/if}}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{>pagination}}
 </div>
