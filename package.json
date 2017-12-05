@@ -9,7 +9,7 @@
     "express-handlebars": "3.0.0",
     "fs-extra": "^4.0.2",
     "handlebars": "4.0.6",
-    "keystone": "4.0.0-beta.5",
+    "keystone": "^4.0.0-beta.1",
     "keystone-email": "1.0.5",
     "lodash": "^4.13.1",
     "minimatch": "^3.0.4",

@@ -5,7 +5,11 @@ var Types = keystone.Field.Types;
  * Player Model
  * ==========
  */
-var Player = new keystone.List("Player");
+var Player = new keystone.List("Player", {
+    map : {
+        name : "nickname"
+    }
+});
 
 Player.add({
     nickname : {
@@ -22,5 +26,5 @@ Player.add({
 /**
  * Registration
  */
-Player.defaultColumns = "name, nickname";
+Player.defaultColumns = "nickname, name";
 Player.register();
