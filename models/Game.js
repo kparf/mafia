@@ -22,6 +22,11 @@ Game.add({
         default : "draft",
         index : true
     },
+    winner : {
+        label : "Победитель",
+        type : Types.Select,
+        options : "mafia, civilians"
+    },
     date : {
         label : "Дата проведения",
         type : Types.Date,
@@ -48,6 +53,26 @@ Game.add({
         label : "Шериф",
         type : Types.Relationship,
         ref : "Player"
+    },
+    firstKilled : {
+        label : "Первый Убитый",
+        type : Types.Relationship,
+        ref : "Player"
+    },
+    bestMove : {
+        label : "Лучший ход",
+        type : Types.Relationship,
+        ref : "Player",
+        many : true
+    },
+    bestPlayer : {
+        label : "Лучший Игрок",
+        type : Types.Relationship,
+        ref : "Player"
+    },
+    bestPlayerPoints : {
+        label : "Очки за лучшего игрока",
+        type : Types.Number
     }
 });
 
